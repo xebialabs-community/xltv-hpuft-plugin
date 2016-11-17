@@ -1,8 +1,17 @@
 plugins {
   id "com.github.hierynomus.license" version "0.13.0"
+  id "com.xebialabs.xl.docker" version "1.0.0"
 }
 
 version='1.0.0'
+
+xlDocker {
+  compileImage = 'xebialabs/xltv-dev-compile'
+  compileVersion = 'v1.4.4.1'
+  runImage = 'xebialabs/xltv-dev-run'
+  runVersion = 'v1.4.4.2'
+  runPortMapping = '6516:6516'
+}
 
 apply plugin: 'java'
 apply plugin: 'idea'
